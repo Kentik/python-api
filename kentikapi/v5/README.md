@@ -1,5 +1,5 @@
-Kentik Python API
-=================
+Kentik Python API Client
+========================
 
 HyperTagging API
 ----------------
