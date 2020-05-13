@@ -93,7 +93,17 @@ that are also listed in upserts - they'd be ignored anyway:
 
 Initialize a HyperTag API client, and submit the batch:
 
-    client = tagging.Client('my@email.com', 'dbb87934ae73198ce0c62d32f7f767de')   # (set your credentials)
+    #  (set your credentials)
+    client = tagging.Client(
+        'my@email.com',
+        'dbb87934ae73198ce0c62d32f7f767de'
+    )
+    #  or, for Kentik EU users:
+    client = tagging.Client(
+        'my@email.com',
+        'dbb87934ae73198ce0c62d32f7f767de',
+        base_url='https://api.kentik.eu'
+    )
 
     # if this is a populator batch:
     client.submit_populator_batch('custom_dimension_name', batch)        # (set the custom dimension name)
