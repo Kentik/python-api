@@ -9,8 +9,6 @@ import requests
 
 
 """HyperScale Tagging API client"""
-_allowedCustomDimensionChars = set('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_')
-
 
 class Batch(object):
     """Batch collects tags or populators as values and criteria."""
@@ -433,10 +431,6 @@ class Client(object):
 
         Submit a populator batch as a series of HTTP requests in small chunks,
         returning the batch GUID, or raising exception on error."""
-        if not set(column_name).issubset(_allowedCustomDimensionChars):
-            raise ValueError('Invalid custom dimension name "%s": must only contain letters, digits, and underscores' % column_name)
-        if len(column_name) < 3 or len(column_name) > 20:
-            raise ValueError('Invalid value "%s": must be between 3-20 characters' % column_name)
 
         url = '%s/api/v5/batch/customdimensions/%s/populators' % (self.base_url, column_name)
         resp_json_dict = self._submit_batch(url, batch)
