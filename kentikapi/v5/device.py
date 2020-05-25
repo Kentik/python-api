@@ -43,10 +43,6 @@ class Device(object):
             }
         }
         resp = requests.post(url, headers=headers, json=data)
-        resp.raise_for_status()
-
-        # print the HTTP response to help debug
-        # print(resp.text)
 
         # break out at first sign of trouble
         resp.raise_for_status()
