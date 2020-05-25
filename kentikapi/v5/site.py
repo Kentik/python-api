@@ -18,7 +18,7 @@ class Site(object):
         self.api_token = api_token
         self.base_url = base_url
 
-    def list(self, url):
+    def list(self, url='https://api.kentik.com/api/v5/sites'):
         headers = {
             'User-Agent': 'kentik-python-api/0.2',
             'Content-Type': 'application/json',
