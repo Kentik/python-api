@@ -25,11 +25,10 @@ class Site(object):
             'X-CH-Auth-Email': self.api_email,
             'X-CH-Auth-API-Token': self.api_token
         }
-        print(headers)
         resp = requests.get(url, headers=headers)
 
         # print the HTTP response to help debug
-        print(resp.text)
+        # print(resp.text)
 
         # break out at first sign of trouble
         resp.raise_for_status()

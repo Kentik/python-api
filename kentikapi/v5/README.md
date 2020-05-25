@@ -1,7 +1,7 @@
 Kentik Python API
 =================
 
-Sites API
+Site API
 ----------------
 
 HyperTagging API
