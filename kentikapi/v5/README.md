@@ -1,6 +1,14 @@
 Kentik Python API
 =================
 
+Site API
+----------------
+ - fetch
+
+Device API
+----------------
+ - create
+
 HyperTagging API
 ----------------
 

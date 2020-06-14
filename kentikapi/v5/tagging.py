@@ -404,7 +404,7 @@ class Client(object):
 
         guid = ""
         headers = {
-            'User-Agent': 'kentik-python-api/0.1',
+            'User-Agent': 'kentik-python-api/0.2',
             'Content-Type': 'application/json',
             'X-CH-Auth-Email': self.api_email,
             'X-CH-Auth-API-Token': self.api_token
@@ -454,7 +454,7 @@ class Client(object):
         """Fetch the status of a batch, given the guid"""
         url = '%s/api/v5/batch/%s/status' % (self.base_url, guid)
         headers = {
-            'User-Agent': 'kentik-python-api/0.1',
+            'User-Agent': 'kentik-python-api/0.2',
             'Content-Type': 'application/json',
             'X-CH-Auth-Email': self.api_email,
             'X-CH-Auth-API-Token': self.api_token
